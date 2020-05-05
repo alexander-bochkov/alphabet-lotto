@@ -1,0 +1,50 @@
+@import '../../styles/index.scss';
+
+.buttons {
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    outline: none;
+    padding: 0;
+    transition: stroke 0.2s ease-out;
+
+    &__menu,
+    &__close {
+        height: 40px;
+        stroke: $menu-element;
+        width: 40px;
+    }
+
+    &__next-letter {
+        height: 40px;
+        stroke: $button-blue;
+        width: 40px;
+
+        &:hover {
+            stroke: $button-blue--hover;
+        }
+    }
+
+    &__print {
+        height: 30px;
+        stroke: $button-blue;
+        width: 30px;
+
+        &:hover {
+            stroke: $button-blue--hover;
+        }
+    }
+
+    &__reset {
+        height: 40px;
+        stroke: $button-red;
+        width: 40px;
+
+        &:hover {
+            stroke: $button-red--hover;
+        }
+    }
+}

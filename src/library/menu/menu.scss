@@ -1,0 +1,108 @@
+@import '../../styles/index.scss';
+
+$dropdown-width: 100px;
+$menu-width: 240px;
+$sidebar-width: 40px;
+
+.menu {
+    backdrop-filter: $blur-8;
+    background: $menu-background;
+    bottom: 0;
+    box-shadow: 2px 0 $shadow-4;
+    box-sizing: border-box;
+    left: -200px;
+    position: fixed;
+    top: 0;
+    transition: left 0.2s ease-out;
+    width: $menu-width;
+    z-index: 1;
+
+    &--opened {
+        left: 0;
+    }
+
+    &__action-icon-layout {
+        height: 16px;
+        left: 174px;
+        position: absolute;
+        width: 16px;
+    }
+
+    &__body {
+        width: $menu-width - $sidebar-width;
+
+        &--full-width {
+            width: $menu-width;
+        }
+    }
+
+    &__checkbox {
+        height: 16px;
+        width: 16px;
+    }
+
+    &__dropdown {
+        backdrop-filter: $blur-8;
+        background: $menu-background;
+        box-shadow: -2px 2px $shadow-4, 2px 2px $shadow-4;
+        width: $dropdown-width;
+    }
+
+    &__dropdown-container {
+        left: 0;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+
+    &__dropdown-layout {
+        display: inline-block;
+        left: $menu-width;
+        position: fixed;
+    }
+
+    &__header {
+        align-items: center;
+        display: flex;
+        height: 40px;
+        justify-content: flex-end;
+    }
+
+    &__chevron-layout {
+        height: 16px;
+        position: absolute;
+        right: 0;
+        transition: right 0.2s ease-out;
+    }
+
+    &__icon-layout {
+        height: 16px;
+        margin-right: 6px;
+        width: 16px;
+    }
+
+    &__item {
+        align-items: center;
+        color: $menu-element;
+        cursor: pointer;
+        display: flex;
+        font-size: 14px;
+        height: 40px;
+        outline: none;
+        padding-left: 10px;
+        position: relative;
+        transition: background-color 0.2s ease-out;
+
+        &--hovered {
+            background: $menu-item--hover;
+
+            .menu__chevron-layout {
+                right: -38px;
+            }
+        }
+
+        &--small {
+            height: 30px;
+        }
+    }
+}

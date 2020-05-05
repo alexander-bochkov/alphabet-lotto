@@ -1,0 +1,19 @@
+@import '../../styles/index.scss';
+
+.random-letter {
+    box-sizing: border-box;
+    font-size: 160px;
+    height: 200px;
+    line-height: 188px;
+    padding-top: 12px;
+    text-align: center;
+    width: 300px;
+
+    &--consonant {
+        color: $text--consonant;
+    }
+
+    &--vowel {
+        color: $text--vowel;
+    }
+}

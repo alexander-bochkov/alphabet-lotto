@@ -1,0 +1,31 @@
+body {
+    background: url('../assets/img/background.jpg');
+    margin: 0;
+}
+
+#print {
+    display: none;
+}
+
+@media print {
+    @page {
+        margin: 0;
+        size: landscape;
+    }
+
+    body {
+        background: white;
+        -webkit-print-color-adjust: exact;
+        /* stylelint-disable */
+        color-adjust: exact;
+        /* stylelint-enable */
+    }
+
+    #app {
+        display: none;
+    }
+
+    #print {
+        display: block;
+    }
+}

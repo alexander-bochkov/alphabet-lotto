@@ -1,0 +1,72 @@
+{
+    "name": "alphabet-lotto",
+    "version": "4.0.3",
+    "scripts": {
+        "build:dev": "./node_modules/.bin/webpack",
+        "build:storybook": "build-storybook",
+        "build": "cross-env NODE_ENV=production ./node_modules/.bin/webpack",
+        "eslint": "eslint \"./**/*.@(js|jsx|ts|tsx)\"",
+        "lint": "npm run eslint && npm run stylelint",
+        "server": "./node_modules/.bin/webpack-dev-server",
+        "storybook": "start-storybook -p 6006",
+        "stylelint": "stylelint src/**/*.scss",
+        "test:dev": "jest --watch",
+        "test": "jest",
+        "typescript": "tsc --noEmit"
+    },
+    "pre-commit": {
+        "silent": true,
+        "run": [
+            "lint",
+            "typescript",
+            "test"
+        ]
+    },
+    "dependencies": {
+        "react": "16.13.1",
+        "react-dom": "16.13.1"
+    },
+    "devDependencies": {
+        "@babel/core": "7.9.6",
+        "@babel/plugin-proposal-class-properties": "7.8.3",
+        "@babel/preset-env": "7.9.6",
+        "@babel/preset-react": "7.9.4",
+        "@babel/preset-typescript": "7.9.0",
+        "@storybook/addons": "5.3.18",
+        "@storybook/react": "5.3.18",
+        "@types/enzyme": "3.10.5",
+        "@types/jest": "25.2.1",
+        "@types/react": "16.9.34",
+        "@types/react-dom": "16.9.7",
+        "@types/storybook__react": "5.2.1",
+        "@types/webpack-env": "1.15.2",
+        "babel-eslint": "10.1.0",
+        "babel-loader": "8.1.0",
+        "cross-env": "7.0.2",
+        "css-loader": "3.5.3",
+        "enzyme": "3.11.0",
+        "enzyme-adapter-react-16": "1.15.2",
+        "enzyme-to-json": "3.4.4",
+        "eslint": "6.8.0",
+        "eslint-config-airbnb": "18.1.0",
+        "eslint-plugin-import": "2.20.2",
+        "eslint-plugin-jest": "23.9.0",
+        "eslint-plugin-jsx-a11y": "6.2.3",
+        "eslint-plugin-react": "7.19.0",
+        "file-loader": "6.0.0",
+        "html-webpack-plugin": "4.3.0",
+        "jest": "26.0.1",
+        "mini-css-extract-plugin": "0.9.0",
+        "node-sass": "4.14.1",
+        "pre-commit": "1.2.2",
+        "resolve-url-loader": "3.1.1",
+        "sass-loader": "8.0.2",
+        "stylelint": "13.3.3",
+        "stylelint-config-standard": "20.0.0",
+        "stylelint-order": "4.0.0",
+        "typescript": "3.8.3",
+        "webpack": "4.43.0",
+        "webpack-cli": "3.3.11",
+        "webpack-dev-server": "3.10.3"
+    }
+}

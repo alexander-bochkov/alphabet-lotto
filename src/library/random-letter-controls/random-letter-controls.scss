@@ -1,0 +1,21 @@
+@import '../../styles/index.scss';
+
+.random-letter-controls {
+    height: 64px;
+    position: relative;
+    width: 300px;
+
+    &__next-letter-layout {
+        height: 40px;
+        left: 70px;
+        position: absolute;
+        width: 40px;
+    }
+
+    &__reset-layout {
+        height: 40px;
+        position: absolute;
+        right: 70px;
+        width: 40px;
+    }
+}

@@ -1,0 +1,72 @@
+@import '../../../styles/index.scss';
+
+$dropdown-border-width: 1px;
+
+.dropdown {
+    border: $dropdown-border-width solid $dropdown-gray;
+    box-sizing: border-box;
+    color: $text-dropdown;
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    height: 22px;
+    outline: none;
+    position: relative;
+    width: fit-content;
+
+    &__icon {
+        align-items: center;
+        background: $dropdown-light-gray;
+        box-sizing: border-box;
+        display: flex;
+        height: 20px;
+        justify-content: center;
+        padding-top: 1px;
+        transition: background-color 0.2s ease-out;
+        width: 20px;
+
+        &--expanded {
+            background: $dropdown-gray;
+        }
+    }
+
+    &__item {
+        box-sizing: border-box;
+        height: 20px;
+        line-height: 22px;
+        outline: none;
+        padding-left: 10px;
+        width: 100%;
+
+        &:hover {
+            background: $dropdown-gray;
+        }
+    }
+
+    &__list {
+        background: $dropdown-list;
+        box-shadow: 0 2px $shadow-4;
+        box-sizing: border-box;
+        left: -$dropdown-border-width;
+        position: absolute;
+        top: 21px;
+        width: 100%;
+        z-index: 1;
+    }
+
+    &__separator {
+        background: $dropdown-gray;
+        display: inline-block;
+        height: 100%;
+        width: $dropdown-border-width;
+    }
+
+    &__value {
+        background: $dropdown-light-gray;
+        display: inline-block;
+        height: 100%;
+        line-height: 22px;
+        padding-left: 10px;
+        padding-right: 12px;
+    }
+}

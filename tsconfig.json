@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "allowJs": false,
+        "allowSyntheticDefaultImports": true,
+        "jsx": "preserve",
+        "moduleResolution": "node",
+        "newLine": "LF",
+        "outDir": "build",
+        "target": "es6"
+    },
+    "include": [
+        "src"
+    ]
+}

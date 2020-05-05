@@ -1,0 +1,72 @@
+@import '../../styles/index.scss';
+
+@media print {
+    .game-cards {
+        &__card {
+            page-break-after: always;
+            zoom: 130%;
+        }
+
+        &__cell {
+            border: 2px solid #000000;
+            box-sizing: border-box;
+            height: 24px;
+            width: 24px;
+        }
+
+        &__section {
+            background: #EBEBEB;
+            border-radius: 14px;
+            height: 508px;
+            overflow: hidden;
+            width: 264px;
+        }
+
+        &__sections-layout {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        &__section-title {
+            background: rgb(200, 200, 200);
+            font-size: 18px;
+            height: 24px;
+            line-height: 24px;
+            text-align: center;
+            width: 264px;
+        }
+
+        &__table {
+            background: white;
+            border: 2px solid #000000;
+            border-collapse: collapse;
+            box-sizing: border-box;
+            font-size: 20px;
+            height: 80px;
+            margin-top: 10px;
+            text-align: center;
+            vertical-align: middle;
+            width: 236px;
+        }
+
+        &__tables-layout {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        &__title {
+            background: #EDEDED;
+            border-radius: 14px;
+            font-size: 24px;
+            height: 40px;
+            line-height: 40px;
+            margin: 14px auto 0 auto;
+            text-align: center;
+            width: 300px;
+        }
+    }
+}

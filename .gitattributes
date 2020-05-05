@@ -1,0 +1,22 @@
+# Text Files
+*.css text
+*.html text
+*.js text
+*.json text
+*.jsx text
+*.md text
+*.scss text
+*.svg text
+*.ts text
+*.tsx text
+
+# Line Endings
+* text eol=lf
+*.* text eol=lf
+
+# Binary Files
+*.gif binary
+*.ico binary
+*.jpg binary
+*.png binary
+*.ttf binary
