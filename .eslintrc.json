@@ -18,6 +18,14 @@
         "@typescript-eslint",
         "jest"
     ],
+    "overrides": [
+        {
+            "files": ["*.stories.*"],
+            "rules": {
+                "@typescript-eslint/explicit-function-return-type": ["off"]
+            }
+        }
+    ],
     "rules": {
         "@typescript-eslint/ban-types": ["warn"],
         "@typescript-eslint/explicit-function-return-type": ["warn"],
