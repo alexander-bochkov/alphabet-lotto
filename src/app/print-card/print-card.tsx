@@ -36,7 +36,7 @@ export const PrintCard = ({
 
     return (
         <Card
-            type="rect"
+            type={Card.TYPE.RECT}
             title="Print game cards"
             content={(
                 <Print
