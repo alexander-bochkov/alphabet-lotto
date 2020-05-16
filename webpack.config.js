@@ -9,7 +9,7 @@ module.exports = {
     context: path.join(__dirname, 'src/app'),
     entry: './index.tsx',
     output: {
-        filename: './js/script.js',
+        filename: `./js/script${production ? '.[hash]' : ''}.js`,
         path: path.join(__dirname, 'public')
     },
     resolve: {
@@ -34,8 +34,7 @@ module.exports = {
                     hmr: !production
                 }
             },
-            'css-loader',
-            'resolve-url-loader', {
+            'css-loader', 'resolve-url-loader', {
                 loader: 'sass-loader',
                 options: {
                     sourceMap: true
@@ -73,7 +72,7 @@ module.exports = {
             title: 'Alphabet Lotto'
         }),
         new MiniCssExtractPlugin({
-            filename: 'css/style.css'
+            filename: `css/style${production ? '.[hash]' : ''}.css`
         })
     ],
     devtool: production ? false : 'source-map',
