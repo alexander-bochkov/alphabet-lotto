@@ -5,13 +5,8 @@
     },
     "extends": [
         "airbnb",
-        "eslint:recommended",
-        "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:import/recommended",
-        "plugin:jest/all",
-        "plugin:jsx-a11y/recommended",
-        "plugin:react/recommended"
+        "plugin:jest/all"
     ],
     "parser": "@typescript-eslint/parser",
     "plugins": [
@@ -39,8 +34,9 @@
                 "requireLast": false
             }
         }],
-        "@typescript-eslint/no-empty-function": ["off"],
+        "@typescript-eslint/no-empty-function": ["warn"],
         "@typescript-eslint/no-explicit-any": ["off"],
+        "@typescript-eslint/no-unused-vars": ["error"],
         "@typescript-eslint/no-use-before-define": ["error", {
             "classes": true,
             "functions": false
