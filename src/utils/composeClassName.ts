@@ -3,17 +3,16 @@ type Modifiers = {
 };
 
 export const composeClassName = (
-    primaryClassName: string,
+    className: string,
     modifiers?: Modifiers
 ): string => {
-    if (!modifiers) return primaryClassName;
+    if (!modifiers) return className;
 
     const modifiersKeys = Object.keys(modifiers);
-    if (!modifiersKeys.length) return primaryClassName;
+    if (!modifiersKeys.length) return className;
 
-    const validModifiersKeys = modifiersKeys.filter(key => modifiers[key] === true);
+    const validModifiersKeys = modifiersKeys.filter(key => modifiers[key]);
+    if (!validModifiersKeys.length) return className;
 
-    if (!validModifiersKeys.length) return primaryClassName;
-
-    return `${primaryClassName} ${validModifiersKeys.join(' ')}`;
+    return `${className} ${validModifiersKeys.join(' ')}`;
 };

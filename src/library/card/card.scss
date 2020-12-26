@@ -1,6 +1,10 @@
 @import '../../styles/index.scss';
 
 $card-header-height: 36px;
+$card-header-text-font-weight: 300;
+
+$card-title-font-size: 18px;
+$card-subtitle-font-size: 16px;
 
 .card {
     backdrop-filter: $blur-8;
@@ -8,18 +12,16 @@ $card-header-height: 36px;
     border: 1px solid $card-stroke;
     box-shadow: -2px 2px $shadow-4, 2px 2px $shadow-4;
     box-sizing: border-box;
-    display: inline-block;
     position: relative;
-    z-index: 0;
+
+    &--large-rect {
+        height: 150px;
+        width: 620px;
+    }
 
     &--rect {
         height: 150px;
         width: 300px;
-    }
-
-    &--rect-large {
-        height: 150px;
-        width: 620px;
     }
 
     &--square {
@@ -44,8 +46,8 @@ $card-header-height: 36px;
     &__title {
         color: $text-card-title;
         display: inline-block;
-        font-size: 18px;
-        font-weight: 300;
+        font-size: $card-title-font-size;
+        font-weight: $card-header-text-font-weight;
         line-height: $card-header-height;
         padding-left: 10px;
     }
@@ -53,8 +55,8 @@ $card-header-height: 36px;
     &__subtitle {
         color: $text-gray;
         display: inline-block;
-        font-size: 16px;
-        font-weight: 300;
+        font-size: $card-subtitle-font-size;
+        font-weight: $card-header-text-font-weight;
         line-height: $card-header-height;
         padding-right: 10px;
     }

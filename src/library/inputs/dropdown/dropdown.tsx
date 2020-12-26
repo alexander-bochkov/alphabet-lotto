@@ -132,7 +132,6 @@ export class Dropdown extends Component<DropdownProps, DropdownState> {
                     {value}
                 </Value>
 
-
                 <div className={composeClassName('dropdown__separator')} />
                 <Icon expanded={expanded} />
 

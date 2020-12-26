@@ -3,7 +3,6 @@ import {Card, RandomLetter, RandomLetterControls} from '../../library';
 import {Alphabet, Letter} from '../../data';
 
 const CARD_TITLE = 'Random Letter';
-const CARD_TYPE = 'square';
 
 type RandomLetterCardProps = {
     currentAlphabet: Alphabet,
@@ -51,7 +50,7 @@ export const RandomLetterCard = ({
             )}
             subtitle={subtitle}
             title={CARD_TITLE}
-            type={CARD_TYPE}
+            type={Card.TYPE.SQUARE}
         />
     );
 };

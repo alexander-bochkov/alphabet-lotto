@@ -1,32 +1,32 @@
 import {composeClassName} from '../';
 
 describe('composeClassName', () => {
-    it('should return primary сlassName if no modifiers are provided', () => {
-        const primaryClassName = 'сlassNameExample';
-        expect(composeClassName(primaryClassName)).toBe(primaryClassName);
+    it('should return only сlassName if no modifiers are provided', () => {
+        const className = 'сlassNameExample';
+        expect(composeClassName(className)).toBe(className);
     });
 
-    it('should return primary сlassName if an empty object as modifiers is provided', () => {
-        const primaryClassName = 'сlassNameExample';
-        expect(composeClassName(primaryClassName, {})).toBe(primaryClassName);
+    it('should return only сlassName if an empty object as modifiers is provided', () => {
+        const className = 'сlassNameExample';
+        expect(composeClassName(className, {})).toBe(className);
     });
 
-    it('should return primary сlassName if no valid modifiers are provided', () => {
-        const primaryClassName = 'сlassNameExample';
+    it('should return only сlassName if no valid modifiers are provided', () => {
+        const className = 'сlassNameExample';
         const modifiers = {
             hovered: false
         };
-        expect(composeClassName(primaryClassName, modifiers)).toBe(primaryClassName);
+        expect(composeClassName(className, modifiers)).toBe(className);
     });
 
-    it('should return concatenated string of primary сlassName and valid modifiers', () => {
-        const primaryClassName = 'сlassNameExample';
+    it('should return concatenated string of сlassName and valid modifiers', () => {
+        const className = 'сlassNameExample';
         const modifiers = {
             'сlassNameExample--opened': true,
             'сlassNameExample--hovered': false,
             'сlassNameExample--small': true
         };
-        const result = `${primaryClassName} ${primaryClassName}--opened ${primaryClassName}--small`;
-        expect(composeClassName(primaryClassName, modifiers)).toBe(result);
+        const result = `${className} ${className}--opened ${className}--small`;
+        expect(composeClassName(className, modifiers)).toBe(result);
     });
 });

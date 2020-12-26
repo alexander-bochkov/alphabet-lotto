@@ -5,17 +5,43 @@
     },
     "extends": [
         "airbnb",
-        "eslint:recommended",
-        "plugin:import/recommended",
-        "plugin:jest/all",
-        "plugin:jsx-a11y/recommended",
-        "plugin:react/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "plugin:jest/all"
     ],
-    "parser": "babel-eslint",
+    "parser": "@typescript-eslint/parser",
     "plugins": [
+        "@typescript-eslint",
         "jest"
     ],
+    "overrides": [
+        {
+            "files": ["*.stories.*"],
+            "rules": {
+                "@typescript-eslint/explicit-function-return-type": ["off"]
+            }
+        }
+    ],
     "rules": {
+        "@typescript-eslint/ban-types": ["warn"],
+        "@typescript-eslint/explicit-function-return-type": ["warn"],
+        "@typescript-eslint/member-delimiter-style": ["warn", {
+            "multiline": {
+                "delimiter": "comma",
+                "requireLast": false
+            },
+            "singleline": {
+                "delimiter": "comma",
+                "requireLast": false
+            }
+        }],
+        "@typescript-eslint/no-empty-function": ["warn"],
+        "@typescript-eslint/no-explicit-any": ["off"],
+        "@typescript-eslint/no-unused-vars": ["error"],
+        "@typescript-eslint/no-use-before-define": ["error", {
+            "classes": true,
+            "functions": false
+        }],
+        "@typescript-eslint/no-var-requires" : ["off"],
         "arrow-parens": ["error", "as-needed"],
         "comma-dangle": ["error", "never"],
         "import/extensions": ["error", "ignorePackages", {
@@ -40,10 +66,6 @@
             "code": 120
         }],
         "no-plusplus": ["off"],
-        "no-use-before-define": ["error", {
-            "classes": true,
-            "functions": false
-        }],
         "object-curly-spacing": ["error", "never"],
         "react/jsx-filename-extension": ["error", {
             "extensions": [
@@ -53,6 +75,9 @@
         }],
         "react/jsx-indent": ["error", 4],
         "react/jsx-indent-props": ["error", 4],
+        "react/require-default-props": ["error", {
+            "forbidDefaultForRequired": true
+        }],
         "react/static-property-placement": ["error", "static public field"]
     },
     "settings": {
